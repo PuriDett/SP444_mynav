@@ -1,6 +1,8 @@
 import utcc1 from "../assets/utcc1.png"
+import ReactPlayer from "react-player";
 function Education(){
     const imgURL = "https://www.utcc.ac.th/wp-content/uploads/2020/05/bg-14.jpeg";
+    const vdoURL = "https://www.youtube.com/watch?v=2h1svqEyRaQ";
     return(
         <div>
         <h1>Below are my university pictures: </h1>
@@ -15,6 +17,11 @@ function Education(){
             <source src={require("../assets/minions.mp4")} type="Video/mp4" />
             Sorry , your browser doens't support videos!
         </video>
+        <br/>
+        <center>
+            <ReactPlayer url={vdoURL} controls width={400}
+                height={300} />
+        </center>
         </div>
     );
 }
